@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	
+	<style type="text/css">
+	 	body{margin: 0px;margin: auto;}
+	 	#mybody{background: url(sky.jpg);background-size: 100%;}
+	 	#ef{background: url(ra.gif); background-size: 10%;height: 800px;}
+	 	
+	 	
+	 	#boy{display: block;position: absolute;top: 300px;opacity: 1;}
+	 	
+	 	#fly{display: block;position: absolute;top: 300px;opacity: 0;left: 300px;
+	 		animation: f 10s infinite alternate}
+			@keyframes f{
+				from{top: 300px;width: 300px;}
+				to{top: 50px;left: 1000px;width: 10px;}
+			}
+		
+		#cloud{width: 100px;display: block;position: absolute; top: 50px;left: 900px; opacity: 0; animation: c 1.3s infinite alternate;}
+			@keyframes c{
+				to{left: 910px;}
+			}
+
+		#cloud2{width: 800px;display: block;position: absolute;top: 200px;right: 900px; opacity: 0; animation: cd 8s infinite alternate;}
+			@keyframes cd{
+				to{right: 500px; width: 900px;}
+			}
+
+		#cloud3{width: 200px;display: block;position: absolute;top: 150px;right: 0px; opacity: 0; animation: cdd 2s infinite alternate;}
+
+		
+		#couple{display: block;position: absolute;right: 500px; top:475px;width: 300px;animation: cc 2s infinite alternate; opacity: 1;}
+			@keyframes cc{
+				from{opacity: 0.8}
+				to{opacity: 0.5}
+
+		#tree{width: 800px;display: block;position: absolute;top: 200px;right: 900px; opacity: 0; animation: cd 8s infinite alternate;}
+			@keyframes cd{
+				to{right: 500px; width: 900px;}
+			}
+
+	
+	</style>
+
+</head>
+
+<body id="mybody">
+	
+	<section id="ef">
+		<img src="back.gif" id="boy">
+		<img src="butterfly.gif" id="fly">
+		<img src="cloud.gif" id="cloud">
+		<img src="back1.gif" id="couple">
+		<img src="cloud2.gif" id="cloud2">
+		<img src="cloud3.gif" id="cloud3">
+		<img src="tree.png" id="tree">
+		
+	</section>
+		
+  		
+  		<audio id="mysound">
+		<source src="ddd.mp3" type="audio/mp3">
+		</audio>
+		<audio id="mysound2">
+		<source src="rain.mp3" type="audio/mp3">
+		</audio>
+
+		
+		
+		<script type="text/javascript">
+			boy.onclick = function(){
+				mybody.style.background = "url('sky1.jpg')"
+				ef.style.background = "url('rain.gif')"
+				boy.style.opacity = "0" 
+				fly.style.opacity = "1"
+				cloud.style.opacity = "0.3"
+				cloud2.style.opacity = "0.5"
+				cloud3.style.opacity = "0.5"
+				
+				couple.style.animation = "none"
+				couple.style.opacity = "0"
+				
+				mysound.play();
+				mysound2.play(); 
+			}
+			
+		</script>
+		
+</body>
+</html>
